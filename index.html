@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen Omondi | My Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+nav {
+    background-color: #1f2937;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+}
+.contact-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #128C7E;
+}        header {
+            background-color: #111827;
+            color: white;
+            padding: 30px;
+        }
+
+        section {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            max-width: 600px;
+            border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+        h2 {
+            color: red;
+        }
+p {
+    color: #333333;
+}
+        footer {
+            background-color: #111827;
+            color: white;
+            padding: 15px;
+     #typing::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}   }
+.light-mode {
+background: white !important;
+color: black !important;
+}
+
+.light-mode section {
+background: #f0f0f0;
+color: black;
+}
+   </style>.progress-container {
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.progress-bar {
+    background-color: #00c853;
+    width: 30%;
+    height: 15px;
+    border-radius: 10px;
+}
+}
+</head>
+
+<body>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#skills">My Skills</a>
+    <a href="#business">My Business</a>
+    <a href="#contact">Contact</a>
+</nav>
+  <button onclick="document.body.classList.toggle('light-mode')">
+    🌙 Toggle Dark Mode
+<p>🕒 Current Time: <span id="clock"></span></p>
+<p>👥 Website Visits: <span id="visits">0</span></p></button>
+  <header id="home">
+        <h1 id="typing"></h1>
+        <p>Future Programmer | Digital Marketing Student</p>
+    </header>
+
+    <section id="about">
+    <h2>About Me</h2>
+        <p>Hello! Welcome to my personal website.</p>
+        <p>I am learning coding, programming, and digital marketing.</p>
+        <p>I enjoy technology and building creative projects.</p>
+<button onclick="this.style.backgroundColor = this.style.backgroundColor === 'orange' ? 'green' : 'orange'">
+    Click Me!
+</button>
+<button onclick="welcomeVisitor()">Welcome Me!</button>
+    </section>s
+
+ <section id="skills">
+    <h2>My Skills</h2>s
+      <p>HTML — Beginner</p>
+<div class="progress-container">
+    <div style="background-color: #ddd; border-radius: 10px; width: 80%; margin: 10px auto;">
+    <div style="background-color: green; width: 30%; height: 15px; border-radius: 10px;"></div>
+<p>CSS — Beginner</p>
+<p>JavaScript — Beginner</p>
+
+<div style="background-color: #ddd; border-radius: 10px; width: 80%; margin: 10px auto;">
+    <div style="background-color: orange; width: 10%; height: 15px; border-radius: 10px;"></div>
+</div>
+
+<div style="background-color: #ddd; border-radius: 10px; width: 80%; margin: 10px auto;">
+    <div style="background-color: dodgerblue; width: 20%; height: 15px; border-radius: 10px;"></div>
+</div>
+</div>
+
+ 
+        <p>HTML | CSS | Digital Marketing | Content Creation</p>
+    </section>
+
+    <section id="business">
+    <h2>My Business</h2>
+        <h3>Steveroro Sneaker Store</h3>
+        <p>Top-quality sneakers, Real comfort — All at affordable rates.</p>
+<h3>Air Jordan 4</h3>
+
+<img src="jordan.jpg" alt="Air Jordan 4 sneakers" width="250">
+
+<p>Price: KSh 3,500</p>
+<p>Available now!</p>
+    </section>
+<section id="contact">
+    <h2>Contact Me</h2>
+
+```
+<p>Interested in working with me or learning more about my projects?</p>
+<p>Email: <a href="mailto:rombotoro001@gmail.com">rombotoro001@gmail.com</a></p>
+
+
+<a href="https://wa.me/254718714562" target="_blank" class="contact-button">
+    Contact Me on WhatsApp
+</a>
+```
+
+</section>
+
+    <footer>
+        <p>© 2026 Stephen Omondi. All rights reserved.</p>
+    </footer>
+<script>
+const text = "Stephen Omondi";
+let index = 0;
+
+function typeName() {
+    if (index < text.length) {
+        document.getElementById("typing").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeName, 150);
+    }
+}
+
+typeName();
+</script>
+<script>
+function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").textContent =
+        now.toLocaleTimeString();
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+<script>
+let visits = localStorage.getItem("websiteVisits");
+
+if (visits === null) {
+    visits = 1;
+} else {
+    visits = Number(visits) + 1;
+}
+
+localStorage.setItem("websiteVisits", visits);
+document.getElementById("visits").textContent = visits;
+<script>
+let visitorName = prompt("Welcome to my website! What is your name?");
+
+if (visitorName && visitorName.trim() !== "") {
+    alert("Welcome to my website, " + visitorName + "! Enjoy your visit. 😊");
+}
+</script>
+</script>
+</body><script>
+function welcomeVisitor() {
+    alert("Welcome to Stephen Omondi's website! 🚀");
+}
+</script>
+</html>
